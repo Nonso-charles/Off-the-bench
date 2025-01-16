@@ -23,3 +23,35 @@
             }
         });
     });
+    
+    
+    // Handle form submission
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent page reload
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        alert(`Thank you for reaching out, ${name}! We'll get back to you soon.`);
+        contactForm.reset(); // Clear the form fields
+    } else {
+        alert('Please fill in all fields before submitting.');
+    }
+});
+
+
+// Handle accordion toggle
+const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+accordionBtns.forEach((button) => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        
+        // Toggle the active class to show the hide button
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+});
