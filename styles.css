@@ -1,133 +1,234 @@
-    /* Basic reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-    }
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+}
 
-    /* Navbar container */
-    nav {
-      background-color: #232323;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-    }
+/* Navbar container */
+nav {
+  background-color: #232323;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-    /* Logo */
-    .logo {
-      color: #fff;
-      font-size: 24px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-decoration: none;
-    }
+/* Logo */
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
 
-    /* Navbar links */
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      position: relative;
-    }
+/* Navbar links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
 
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 8px 16px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
 
-    .nav-links a:hover {
-      background-color: #ff6f00;
-    }
+.nav-links a:hover {
+  background-color: #ff6f00;
+}
 
-    /* Dropdown for Episodes */
-    .dropdown {
-      position: relative;
-    }
+/* Dropdown for Episodes */
+.dropdown {
+  position: relative;
+}
 
-    .dropdown select {
-      background-color: #333;
-      border: none;
-      color: #fff;
-      font-size: 14px;
-      outline: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-    }
+.dropdown select {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
 
-    .dropdown select:focus {
-      background-color: #ff6f00;
-    }
+.dropdown select:focus {
+  background-color: #ff6f00;
+}
 
-    /* Search bar */
-    .search-bar {
-      background-color: #333;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      color: #fff;
-      font-size: 14px;
-      outline: none;
-      display: none; /* Initially hidden on small screens */
-    }
+/* Search bar */
+.search-bar {
+  background-color: #333;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  display: none; /* Initially hidden on small screens */
+}
 
-    .search-bar::placeholder {
-      color: #bbb;
-    }
+.search-bar::placeholder {
+  color: #bbb;
+}
 
-    /* Hamburger menu */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      position: absolute;
-      right: 30px; /* Align to the right end */
-    }
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px; /* Align to the right end */
+}
 
-    .hamburger div {
-      width: 30px;
-      height: 4px;
-      background-color: #fff;
-      border-radius: 2px;
-    }
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+}
 
-    /* Responsive design */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+/* Episodes section */
+.episodes {
+  padding: 50px 30px;
+  background: #fff;
+  text-align: center;
+}
 
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        margin-top: 10px;
-      }
+.episodes h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #232323;
+}
 
-      .nav-links.active {
-        display: flex;
-      }
+.episode {
+  display: flex;
+  gap: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-      .search-bar.active {
-        display: block; /* Show search bar when active */
-        margin-top: 10px;
-      }
+.episode img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
-      .hamburger {
-        display: flex;
-      }
-    }
+.episode-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.episode h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #232323;
+}
+
+.episode p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.release-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.audio-player {
+  margin-bottom: 10px;
+}
+
+.episode a {
+  color: #ff6f00;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.episode a:hover {
+  text-decoration: underline;
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated {
+  animation: slideUpFadeIn 1.5s ease-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .search-bar.active {
+    display: block; /* Show search bar when active */
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .episodes {
+    padding: 30px 15px;
+  }
+
+  .episode {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .episode img {
+    margin-bottom: 20px;
+  }
+
+  .episode-details {
+    align-items: center;
+  }
+}
